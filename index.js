@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
     }
   });
 });
-app.listen(4001, () => {
+app.listen(process.env.PORT || port, () => {
   console.log('Example app listening to Heroku port.');
 });
