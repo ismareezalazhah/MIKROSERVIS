@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   con.getConnection(function (err, tempconnection) {
     if (err) { res.send("Error occured!"); }
     else {
-      var sql = "SELECT custEmail AS 'Email', custName AS 'Name', custGender AS 'Gender', custAddress AS 'Address', custPhone AS 'Phone Number' FROM customer";
+      var sql = "SELECT custEmail AS 'Email', custName AS 'Name', custGender AS 'Gender          ', custAddress AS 'Address           ', custPhone AS 'Phone Number        ' FROM customer";
       con.query(sql, function (err, result, fields) {
         if (err) { throw err; }
         else {
